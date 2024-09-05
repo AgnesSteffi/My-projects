@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Level 1 --- TASK 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(https://img.freepik.com/free-photo/abstract-smooth-dark-blue-with-black-vignette-studio-well-use-as-backgroundbusiness-reportdigitalwebsite-templatebackdrop_1258-96047.jpg);
+            background-size: cover;
+        }
+        img {
+            padding-left: 1600px;
+        }
+        .container {
+            padding-right: 16px;
+            position: relative;
+            left: 1050px;
+            bottom: 160px;
+            width: 150px;
+            height: 80px;
+            background-color: lightblue; /* Green */
+            border: solid black;
+            box-shadow: 10px 10px 15px rgb(#000);
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .container:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+        .container:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .grey-qo {
+            font-family: 'Grey Qo',cursive;
+            font-size: 100px;
+            color: #000000d0;
+        }
+        div {
+            padding-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const hours = new Date().getHours();
+        let greeting;
+        if (hours < 12) {
+            greeting = 'Good Morning!';
+        } else if (hours < 18) {
+            greeting = 'Good Afternoon!';
+        } else {
+            greeting = 'Good Evening!';
+        }
+        alert(greeting);
+    </script>
+    <img src="https://d8it4huxumps7.cloudfront.net/images/partners/new_organisation_image-CRv99ig3tA1640311402yqTm7QQ5hG.png">
+    <div>
+        <h1 class="grey-qo">Wanna change the color of this button</h1>
+        <button class="container" id="clr">CLICK</button> 
+        <script>
+            const button=document.getElementById('clr');
+            button.addEventListener('click',() => {
+                button.style.backgroundColor = button.style.backgroundColor === 'blue' ? 'green' : 'blue';
+            });
+         </script>
+    </div>
+    <div>
+        <h1 class="grey-qo">Wanna operate our calculator</h1>
+        <button class="container" id="navigateButton">Go to Calc</button>
+        <script>
+            document.getElementById('navigateButton').onclick = function() {
+                window.location.href = 'calc.html';
+            };
+        </script>
+    </div>
+    
+</body>
+</html>

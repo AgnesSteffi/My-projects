@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slideshow</title>
+    <style>
+        body {
+            background-image: url(https://wallpaperaccess.com/full/2591355.jpg);
+        }
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .mySlides img {
+            width: 100%;
+            height: auto;
+        }
+        .text {
+            margin-top: 100px;
+            align-self: center;
+            text-align: center;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="slide1.png" alt="Slide 1">
+            <div class="text">Arcane</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="slide2.jpg" alt="Slide 2">
+            <div class="text">Powder</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="slide3.jpg" alt="Slide 3">
+            <div class="text">Now a Jinx </div>
+        </div>
+        <div class="mySlides fade">
+            <img src="slide4.jpg" alt="Slide 4">
+            <div class="text">Violet - The Elder sister of Powder</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="slide5.jpg" alt="Slide 5">
+            <div class="text">Still loves her sister</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="slide6.jpeg" alt="Slide 6">
+            <div class="text">The tragic turn of events made them to go this far....<br> Wanna know more watch Arcane on Netflix...</div>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+        setInterval(showSlides, 5000);
+    </script>
+    <a style="margin-left: 1400px; margin-bottom: 20px;" href="home.html"><button>Go back</button></a>
+</body>
+</html>
